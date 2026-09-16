@@ -59,7 +59,7 @@ class MeHaMadafApp(QMainWindow):
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    app.setLayoutDirection(Qt.RightToLeft)
+    app.setLayoutDirection(Qt.LayoutDirection.RightToLeft)
 
     window = MeHaMadafApp()
     window.show()

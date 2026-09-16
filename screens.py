@@ -2,18 +2,18 @@
 from PySide6.QtCore import Qt
 from PySide6.QtGui import QColor
 from PySide6.QtWidgets import (
-    QWidget,
-    QVBoxLayout,
-    QHBoxLayout,
-    QLabel,
-    QPushButton,
-    QLineEdit,
     QComboBox,
-    QTextEdit,
+    QHBoxLayout,
+    QHeaderView,
+    QLabel,
+    QLineEdit,
+    QMessageBox,
+    QPushButton,
     QTableWidget,
     QTableWidgetItem,
-    QMessageBox,
-    QHeaderView,
+    QTextEdit,
+    QVBoxLayout,
+    QWidget,
 )
 
 
@@ -24,15 +24,15 @@ class WelcomeScreen(QWidget):
         self.main_app = main_app
 
         layout = QVBoxLayout(self)
-        layout.setAlignment(Qt.AlignCenter)
+        layout.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
         title = QLabel("מהמדף")
         title.setStyleSheet("font-size: 36px; font-weight: bold; color: green;")
-        title.setAlignment(Qt.AlignCenter)
+        title.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
         subtitle = QLabel("מצילים מזון ומעבירים אותו למי שצריך")
         subtitle.setStyleSheet("font-size: 18px;")
-        subtitle.setAlignment(Qt.AlignCenter)
+        subtitle.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
         btn_business = QPushButton("כניסה כעסק / סופר")
         btn_business.setStyleSheet("font-size: 16px; padding: 10px;")
@@ -40,7 +40,7 @@ class WelcomeScreen(QWidget):
             lambda: self.main_app.login("business", "סופר שופרסל מרכז")
         )
 
-        btn_user = QPushButton("כניסה כעמותה / אדם שזקוק למזון")
+        btn_user = QPushButton("כניסה כעמותה")
         btn_user.setStyleSheet("font-size: 16px; padding: 10px;")
         btn_user.clicked.connect(lambda: self.main_app.login("user", "עמותת פתחון לב"))
 
