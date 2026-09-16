@@ -117,7 +117,7 @@ class MainScreen(QWidget):
             # אם התרומה נלקחה, משנים את רקע התאים לירוק
             if is_requested:
                 for cell in cells:
-                    cell.setBackground(QColor("#c8e6c9"))  # ירוק בהיר
+                    cell.setBackground(QColor("#69e86e"))  # ירוק בהיר
 
             self.table.setItem(row, 0, cell_business)
             self.table.setItem(row, 1, cell_product)

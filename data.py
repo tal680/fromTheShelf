@@ -14,7 +14,7 @@ INITIAL_DONATIONS = [
     },
     {
         "id": 2,
-        "business": "מכולת יוסי",
+        "business": "סופר שופרסל מרכז",
         "product": "קרטוני חלב 3%",
         "quantity": "8 יחידות",
         "category": "מוצרי חלב",
