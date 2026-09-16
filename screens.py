@@ -17,7 +17,6 @@ from PySide6.QtWidgets import (
 )
 
 
-# --- 1. מסך פתיחה ---
 class WelcomeScreen(QWidget):
     def __init__(self, main_app):
         super().__init__()
@@ -51,7 +50,6 @@ class WelcomeScreen(QWidget):
         layout.addWidget(btn_user)
 
 
-# --- 2. מסך ראשי (טבלת תרומות) ---
 class MainScreen(QWidget):
     def __init__(self, main_app):
         super().__init__()
@@ -65,7 +63,6 @@ class MainScreen(QWidget):
         )
         layout.addWidget(self.title_label)
 
-        # סרגל עליון
         top_bar = QHBoxLayout()
 
         self.btn_post = QPushButton("+ פרסם תרומה חדשה")
@@ -82,7 +79,6 @@ class MainScreen(QWidget):
         top_bar.addWidget(btn_logout)
         layout.addLayout(top_bar)
 
-        # טבלה
         self.table = QTableWidget()
         self.table.setColumnCount(6)
         self.table.setHorizontalHeaderLabels(
@@ -92,7 +88,6 @@ class MainScreen(QWidget):
         layout.addWidget(self.table)
 
     def refresh_table(self):
-        # מציגים את כל התרומות ברשימה (גם אלו שנלקחו)
         all_donations = self.main_app.donations
         self.table.setRowCount(len(all_donations))
 
@@ -140,7 +135,6 @@ class MainScreen(QWidget):
             self.table.setCellWidget(row, 5, btn_view)
 
 
-# --- 3. מסך פרסום תרומה ---
 class PostScreen(QWidget):
     def __init__(self, main_app):
         super().__init__()
@@ -219,7 +213,6 @@ class PostScreen(QWidget):
         self.main_app.show_screen(1)
 
 
-# --- 4. מסך פרטי תרומה ---
 class DetailsScreen(QWidget):
     def __init__(self, main_app):
         super().__init__()

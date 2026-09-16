@@ -28,10 +28,10 @@ class MeHaMadafApp(QMainWindow):
         self.screen_post = PostScreen(self)
         self.screen_details = DetailsScreen(self)
 
-        self.stacked_widget.addWidget(self.screen_welcome)  # index 0
-        self.stacked_widget.addWidget(self.screen_main)  # index 1
-        self.stacked_widget.addWidget(self.screen_post)  # index 2
-        self.stacked_widget.addWidget(self.screen_details)  # index 3
+        self.stacked_widget.addWidget(self.screen_welcome)
+        self.stacked_widget.addWidget(self.screen_main)
+        self.stacked_widget.addWidget(self.screen_post)
+        self.stacked_widget.addWidget(self.screen_details)
 
         self.show_screen(0)
 

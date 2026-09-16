@@ -23,4 +23,15 @@ INITIAL_DONATIONS = [
         "status": "זמינה",
         "requested_by": "",
     },
+{
+        "id": 3,
+        "business": "מכולת נועם",
+        "product": "ביצים",
+        "quantity": "12",
+        "category": "מוצרים בסיסיים",
+        "time": "עד 18:00",
+        "notes": "בתוקף עד מחר",
+        "status": "זמינה",
+        "requested_by": "",
+    },
 ]
